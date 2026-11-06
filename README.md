@@ -56,34 +56,3 @@ main.py                     Punto de entrada
 
 La separación es MVC: el modelo tiene las reglas, la vista solo imprime y el controlador solo coordina.
 
-## Cómo ejecutarlo
-
-1. Instala las dependencias:
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-2. Genera la data con el script del curso (sin `--limpio`, para que traiga errores a propósito):
-
-   ```
-   python generar_datos.py cobranzas --filas 10000 --output data/data_cobranzas.csv
-   ```
-
-3. Corre el programa:
-
-   ```
-   python main.py
-   ```
-
-4. Usa la opción 1 para cargar, y luego las demás. El Excel queda en la carpeta `output/` con la fecha en el nombre (`cola_cobranza_AAAA-MM-DD.xlsx`).
-
-## Tecnologías
-
-Python, pandas, SQLite (`sqlite3`) y openpyxl.
-
-## Limitaciones
-
-- No considera feriados.
-- Los pesos del puntaje son un criterio propio, no salen de datos reales.
-- La data es sintética: por ejemplo, tener más gestiones previas no aumenta la probabilidad de pago.
